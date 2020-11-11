@@ -12,7 +12,7 @@ class GildedRoseTest {
     //===qual
     
     @Test
-        void Sulfuras_qual_0() {
+        void Sulfuras_qual_S0_Q80() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 0, 80)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -21,7 +21,7 @@ class GildedRoseTest {
         
     
     @Test
-        void Sulfuras_qual_neg() {
+        void Sulfuras_qual_Sneg_Q80() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", -1, 80)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -29,7 +29,7 @@ class GildedRoseTest {
     }
         
     @Test
-        void Sulfuras_qual_pos() {
+        void Sulfuras_qual_Spos_Q80() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 1, 80)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -39,7 +39,7 @@ class GildedRoseTest {
     //===sell
         
     @Test
-        void Sulfuras_sell_0() {
+        void Sulfuras_sell_S0_Q80() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 0, 80)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -48,7 +48,7 @@ class GildedRoseTest {
         
     
     @Test
-        void Sulfuras_sell_neg() {
+        void Sulfuras_sell_Sneg_Q80() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", -1, 80)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -56,7 +56,7 @@ class GildedRoseTest {
     }
         
     @Test
-        void Sulfuras_sell_pos() {
+        void Sulfuras_sell_Spos_Q80() {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 1, 80)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
