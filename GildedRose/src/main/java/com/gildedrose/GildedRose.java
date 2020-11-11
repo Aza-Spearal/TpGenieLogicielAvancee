@@ -2,43 +2,43 @@ package com.gildedrose;
 
 class GildedRose {
 
-  static final String AGED_BRIE = "Aged Brie";
-  static final String BACKSTAGE_CONCERT = "Backstage passes to a TAFKAL80ETC concert";
-  static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
-  static final String CONJURED = "Conjured Mana Cake";
+    static final String AGED_BRIE = "Aged Brie";
+    static final String BACKSTAGE_CONCERT = "Backstage passes to a TAFKAL80ETC concert";
+    static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    static final String CONJURED = "Conjured Mana Cake";
 
-  static final int MAX_QUALITY = 50;
+    static final int MAX_QUALITY = 50;
 
-  Item[] items;
+    Item[] items;
 
-  public GildedRose(Item[] items) {
-      this.items = items;
-  }
-// modification de la fonction updateQuality()
-// chaque item a sa propre fonction qui va modifier sa qualité en fonction des jours qui passent 
+    public GildedRose(Item[] items) {
+        this.items = items;
+    }
 
-public void updateQuality() {
-    for (Item item : items) {
-        switch (item.name) {
-            case AGED_BRIE:
-                updateAgedBrie(item);
-                break;
-            case BACKSTAGE_CONCERT:
-                updateBackstageConcert(item);
-                break;
-            case SULFURAS:
-                updateSulfuras(item);
-                break;
-            case CONJURED:
-                updateConjured(item);
-                break;
-            default:
-                updateOther(item);
+	// chaque item a sa propre fonction qui va modifier sa qualité en fonction des jours qui passent
+
+    public void updateQuality() {
+        for (Item item : items) {
+            switch (item.name) {
+                case AGED_BRIE:
+                    updateAgedBrie(item);
+                    break;
+                case BACKSTAGE_CONCERT:
+                    updateBackstageConcert(item);
+                    break;
+                case SULFURAS:
+                    updateSulfuras(item);
+                    break;
+                case CONJURED:
+                    updateConjured(item);
+                    break;
+                default:
+                    updateOther(item);
+            }
         }
     }
-}
 
-    /* -------------------------------------mise à jour de la qualité spécifique à chaque item --------------------------------------------- */
+    /*-------------------------------mise à jour de la qualité spécifique à chaque item-------------------------------*/
 
     private void updateAgedBrie(Item item) {
         // augmente sa qualité (`quality`) plus le temps passe (`sellIn`)
@@ -86,8 +86,8 @@ public void updateQuality() {
         }
     }
 
-    /* ------------------------------------------------------------------------------------------------------------------------ */
- /* Pour n'importe quel produit : 
+    /*-------------------------------------------------------------------------------------*/
+ /* Pour n'importe quel produit :
         - plus les jours passent, plus la quaité dimine
         - si le produit est périmé, sa qualité diminue */
     private void updateOther(Item item) {
